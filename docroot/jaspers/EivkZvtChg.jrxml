@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.1.final using JasperReports Library version 6.2.1  -->
+<!-- 2016-06-29T17:30:39 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="EivkZvtChg" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="aab9ee85-8de5-4a9d-ad58-ebc1a532de49">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="VCON"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="P_BANK_BIN_" class="java.lang.String"/>
+	<parameter name="P_DECLARATION_NUMBER_" class="java.lang.String"/>
+	<parameter name="P_DECLARATION_DATE_" class="java.sql.Timestamp"/>
+	<parameter name="CUR" class="java.sql.ResultSet" isForPrompting="false"/>
+	<queryString language="plsql">
+		<![CDATA[{ call READ_PRTL_EEU_MW_CHNG_LIST(P_BANK_BIN_ => $P{P_BANK_BIN_},
+                                P_DECLARATION_NUMBER_ => $P{P_DECLARATION_NUMBER_},
+                                P_DECLARATION_DATE_ => $P{P_DECLARATION_DATE_},
+                                CUR => $P{CUR})
+ }]]>
+	</queryString>
+	<field name="EEMWC_DECLARATION_NUMBER" class="java.lang.String"/>
+	<field name="EEMWC_DECLARATION_DATE" class="java.sql.Date"/>
+	<field name="EEMWS_NAME" class="java.lang.String"/>
+	<field name="EEMWC_NEW_DECLARATION_NUMBER" class="java.lang.String"/>
+	<field name="EEMWC_NEW_DECLARATION_DATE" class="java.sql.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="120" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="0" width="260" height="62" uuid="2cec7b0b-858c-4f3a-a845-0a98b2af211f"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Реквизиты заявления о ввозе товаров, информация о котором ранее была направлена органом государственных доходов на основании электронного запроса Национального Банка]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="262" y="0" width="230" height="62" uuid="7521c682-13b4-49dd-afa0-41f7db9a7b9d"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Реквизиты нового заявления о ввозе товаров, представленного взамен отозванного или представленного в связи с изменением цены импортированных товаров]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="62" width="80" height="30" uuid="1eaba1c7-93d9-46d4-8088-122c6ff65b76"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Номер]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="82" y="62" width="100" height="30" uuid="a5ca8ccc-0044-4381-b8b7-9ad5daa7574c"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Дата]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="182" y="62" width="80" height="30" uuid="f5a4df89-4298-463f-bf56-091a7be9379c"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<text><![CDATA[Статус]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="262" y="62" width="110" height="30" uuid="08977ab2-0ab3-4f1d-86c1-30514b339b0e"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Номер]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="372" y="62" width="120" height="30" uuid="fcb93f49-753b-418d-be54-ecf00ab913c3"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Дата]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="92" width="80" height="20" uuid="923d785d-2d36-465d-970d-1655affab001"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="82" y="92" width="100" height="20" uuid="5f9e9377-8108-4060-bed0-e55be08929dd"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="182" y="92" width="80" height="20" uuid="9abfb124-dcd8-4eec-974e-4e16c64f607d"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="262" y="92" width="110" height="20" uuid="a178b34b-fec5-4c5d-a2ea-65cfe8c880be"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="372" y="92" width="120" height="20" uuid="940cae41-775c-4b69-aa4c-be5889887321"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[5]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="2" y="0" width="80" height="29" uuid="083da4e3-a393-4dd2-9af1-3ef14686c4b2"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{EEMWC_DECLARATION_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="82" y="-1" width="100" height="30" uuid="e6472597-9eb5-4572-ba9b-8ce219ae46fe"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{EEMWC_DECLARATION_DATE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="182" y="0" width="80" height="29" uuid="1d5aef49-ddc9-49cc-9f46-67be056e2748"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{EEMWS_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="262" y="0" width="110" height="29" uuid="1ff2eb05-be5c-49bc-acdd-98f2cba2be83"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{EEMWC_NEW_DECLARATION_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="372" y="-1" width="120" height="30" uuid="570d4b56-c282-4bd0-8cb7-8d908bb2b77d"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{EEMWC_NEW_DECLARATION_DATE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
